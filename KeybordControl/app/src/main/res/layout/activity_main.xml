@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vkira.keybordcontrol.MainActivity"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EnterName"
+        android:text="Enter Name:"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EnterNameEditText"
+        android:padding="10dp"
+        android:inputType="text"
+        android:textColor="#FFF"
+        android:textAllCaps="true"
+        android:imeOptions="actionNext"
+        android:layout_margin="10dp"
+        android:background="@drawable/shapedbackground"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/EmailBox"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UserHelloText"
+            android:text="Enter Name:"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UserEmailAddress"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFF"
+            android:textAllCaps="true"
+            android:imeOptions="actionNext"
+            android:layout_margin="10dp"
+            android:background="@drawable/shapedbackground"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/MobileNumberBox"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Mobile Number"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UserMobileNumber"
+            android:padding="10dp"
+            android:inputType="number"
+            android:textColor="#FFF"
+            android:textAllCaps="true"
+            android:imeOptions="actionNext"
+            android:layout_margin="10dp"
+            android:background="@drawable/shapedbackground"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Submit Data"
+            android:textColor="#fff"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/shapedbackground"
+            android:id="@+id/SubmitButton"
+            android:onClick="FinalizeVerification"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:textColor="#FFF"
+        android:background="@drawable/shapedbackground"
+        android:padding="12dp"
+        android:id="@+id/FinalMessage"
+        android:visibility="gone"/>
+
+</LinearLayout>
