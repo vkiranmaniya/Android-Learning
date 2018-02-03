@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vkira.implicitintents.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:text="Intents Demo"
+        android:layout_marginLeft="20dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/LaunchMap"
+                    android:layout_margin="2dp"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:text="Launch Map"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/LaunchMarket"
+                    android:layout_margin="2dp"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:text="Launch Market Act."/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/SendMail"
+                    android:layout_margin="2dp"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:text="Send Email"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/ShareIcon"
+                    android:layout_margin="2dp"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:text="Share AppIcon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/ShareImages"
+                    android:layout_margin="2dp"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:text="Share Pictures"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/ShareMedia"
+                    android:layout_margin="2dp"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:text="Share AppIcon"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
