@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/actor_image"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/photo_shape"
+            android:src="@drawable/tom_cruise" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/actor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tom Cruise"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/actor_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/11/1994" />
+
+            <TextView
+                android:id="@+id/actor_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5'10" />
+
+            <TextView
+                android:id="@+id/actor_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="United States" />
+
+            <TextView
+                android:id="@+id/actor_wife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jennifer Aniston" />
+
+            <TextView
+                android:id="@+id/actor_child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shiloh Nouvel Jolie-Pitt, Maddox Chivan Jolie-Pitt" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/actor_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="William Bradley 'Brad' Pitt is an American actor and film producer. He has received a Golden Globe Award, a Screen Actors Guild Award, and three Academy Award nominations in acting categories" />
+
+
+</LinearLayout>
