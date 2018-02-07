@@ -1,7 +1,6 @@
 package com.example.vkira.jsonparsing;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -17,13 +16,12 @@ import android.widget.TextView;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by vkira on 03-02-2018.
  */
 
-public class ActorAdapter extends ArrayAdapter<> {
+public class ActorAdapter extends ArrayAdapter<ActorsModel> {
 
     ArrayList<ActorsModel> mArrayList;
     Context mContext ;
@@ -66,7 +64,7 @@ public class ActorAdapter extends ArrayAdapter<> {
         holder.country.setText(mArrayList.get(position).getCountry());
         holder.description.setText(mArrayList.get(position).getDescription());
         holder.children.setText(mArrayList.get(position).getChildren());
-
+        new DownloadImageTask(holder.image).execute(mArrayList.get(position).getImage());
         return convertView;
     }
 
