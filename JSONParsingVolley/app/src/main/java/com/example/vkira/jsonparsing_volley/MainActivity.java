@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.android.volley.Cache;
+import com.android.volley.Network;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -29,9 +32,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Cache mCache = new DiskBasedCache(getCacheDir(),2048);
         mActorsModel = new ArrayList<>();
-        final RequestQueue mQueue = Volley.newRequestQueue(MainActivity.this);
+
+        Cache mCache = new DiskBasedCache(getCacheDir(),2048*1024);
+        Network mNetwork = new BasicNetwork(new HurlStack());
+        final RequestQueue mQueue = new RequestQueue(mCache , mNetwork);
+        mQueue.start();
+
+
+
         StringRequest mReq = new StringRequest(Request.Method.POST, SERVER_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -51,15 +60,11 @@ public class MainActivity extends AppCompatActivity {
                                 model.setSpouse(object.getString("spouse"));
                                 model.setHeight(object.getString("height"));
                                 mActorsModel.add(model);
-                                Log.d("Data Recived", model.toString());
+                                Log.d(i+"th Data Recived", model.toString());
+                                mQueue.stop();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                        }
-                        finally {
-                            if(mQueue != null){
-                                mQueue.stop();
-                            }
                         }
                     }
                 },
