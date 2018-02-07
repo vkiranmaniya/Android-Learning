@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.vkira.jsonparsing_volley.MainActivity">
 
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
